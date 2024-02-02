@@ -15,12 +15,12 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 0.5.5
+version: 0.5.6
 
 dependencies:
   - name: tsuru-api
-    version: "0.2.18"
-    repository: https://tsuru.github.io/charts
+    version: "0.2.22"
+    repository: https://impaas.github.io/charts
   - name: kubernetes-router
     version: "0.1.15"
     repository: https://tsuru.github.io/charts
