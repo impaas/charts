@@ -550,6 +550,21 @@ entries:
     - https://github.com/tsuru/charts/releases/download/ingress-merge-0.1-alpha4/ingress-merge-0.1-alpha4.tgz
     version: 0.1-alpha4
   - apiVersion: v1
+    created: "2024-02-02T01:34:38.75044807Z"
+    description: Merge Ingress Controller combines multiple ingress resorces into
+      a new one.
+    digest: 6618d7811e1600fdeb0ea5ed1986c36d0b8a122e9c94d774f47a23a858b42c7a
+    home: https://github.com/jakubkulhan/ingress-merge
+    keywords:
+    - ingress
+    maintainers:
+    - email: jakub.kulhan@gmail.com
+      name: Jakub Kulhan
+    name: ingress-merge
+    urls:
+    - https://github.com/impaas/charts/releases/download/ingress-merge-0.1-alpha4/ingress-merge-0.1-alpha4.tgz
+    version: 0.1-alpha4
+  - apiVersion: v1
     created: "2021-09-03T17:21:11.981258984Z"
     description: Merge Ingress Controller combines multiple ingress resorces into
       a new one.
@@ -2352,6 +2367,16 @@ entries:
     - https://github.com/tsuru/charts/releases/download/sysctl-0.1.0/sysctl-0.1.0.tgz
     version: 0.1.0
   tsuru-api:
+  - apiVersion: v2
+    appVersion: 1.19.0-rc1
+    created: "2024-02-02T01:34:39.955482195Z"
+    description: A Helm chart to install Tsuru API Server
+    digest: 9857456e948806bab2ecaa3123fd816dc0c157a3f7bdc201934c831a34192896
+    name: tsuru-api
+    type: application
+    urls:
+    - https://github.com/impaas/charts/releases/download/tsuru-api-0.2.22/tsuru-api-0.2.22.tgz
+    version: 0.2.22
   - apiVersion: v2
     appVersion: 1.19.0-rc1
     created: "2023-12-12T13:24:07.471766522Z"
@@ -4666,4 +4691,4 @@ entries:
     urls:
     - https://github.com/tsuru/charts/releases/download/tsuru-stack-0.1.0/tsuru-stack-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-30T12:37:46.208942421Z"
+generated: "2024-02-02T01:34:40.294110086Z"
