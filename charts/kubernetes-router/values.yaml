@@ -11,10 +11,10 @@ strategy:
   type: RollingUpdate
 
 image:
-  repository: tsuru/kubernetes-router
-  pullPolicy: IfNotPresent
+  repository: ghcr.io/impaas/kubernetes-router
+  pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "edge"
 
 imagePullSecrets: []
 nameOverride: ""
