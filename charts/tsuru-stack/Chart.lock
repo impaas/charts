@@ -7,7 +7,7 @@ dependencies:
   version: 0.1.16
 - name: ingress-nginx
   repository: https://kubernetes.github.io/ingress-nginx
-  version: 4.10.0
+  version: 4.10.1
 - name: tsuru-monitoring
   repository: https://tsuru.github.io/charts
   version: 0.1.1
@@ -23,5 +23,5 @@ dependencies:
 - name: deploy-agent
   repository: https://tsuru.github.io/charts
   version: 1.4.6
-digest: sha256:282d0dd6a35447d61153e9b369ca93c719e9e04dbe76526fb3fb40d15c6200a7
-generated: "2024-03-07T16:20:33.554727-03:00"
+digest: sha256:fb33b176b383bd582eccda3638260a051ca9f3cab9731246e4e33f628046ad67
+generated: "2024-05-13T22:29:44.916660415+01:00"
