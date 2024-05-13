@@ -1,15 +1,16 @@
-# Default values for buildkit.
+# Default values for acl-api.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: moby/buildkit
+  repository: tsuru/acl-api
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
+imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
@@ -21,8 +22,6 @@ serviceAccount:
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
   name: ""
-
-annotations: {}
 
 podAnnotations: {}
 
@@ -38,9 +37,25 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  create: true
   type: ClusterIP
   port: 80
+  annotations: {}
+
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
@@ -54,30 +69,38 @@ resources: {}
   #   cpu: 100m
   #   memory: 128Mi
 
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
+
 nodeSelector: {}
 
 tolerations: []
 
 affinity: {}
 
-readinessProbe:
-  exec:
-    command:
-    - /usr/bin/buildctl
-    - -timeout=1
-    - debug
-    - workers
-  periodSeconds: 5
-  successThreshold: 5
+volumes: []
+volumeMounts: []
 
-updateStategy: {}
+metrics:
+  enabled: true
 
-volumeClaimTemplates: []
+instances:
+  serviceName: ""
+  serviceAnnotations: {}
 
-# buildkitd config file
-# See more: https://github.com/moby/buildkit/blob/master/docs/buildkitd.toml.md
-config: ""
-
-podDisruptionBudget:
-  enabled: false
-  maxUnavailable: "10%"
+api:
+  secretName: acl-api # name of the secret that contains api username, password, mongo credentials and Tsuru token
+  engines: "acl-operator"
+  debug: false
+  loglevel: "INFO"
+  port: 8888
+  auth: false
+  storage: false
+  dbaasMongodbEndpoint: false
+  tsuruHost: "http://localhost:8080"
+  syncDisabled: true
+  syncInterval: "5m"

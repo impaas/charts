@@ -6632,6 +6632,12 @@ spec:
                           Defaults to true.
                         type: boolean
                     type: object
+                  shutdown:
+                    default: false
+                    description: Shutdown flag tells whether controller should scale
+                      down Nginx instances. Any assosciated HorizontalPodAutoscaler
+                      is remove/created when this flag is toggled.
+                    type: boolean
                   suspend:
                     default: false
                     description: Suspend flag tells whether controller should suspend
@@ -6726,6 +6732,9 @@ spec:
   - additionalPrinterColumns:
     - jsonPath: .spec.suspend
       name: Suspended
+      type: boolean
+    - jsonPath: .spec.shutdown
+      name: Shutdown
       type: boolean
     - jsonPath: .metadata.creationTimestamp
       name: Age
@@ -13086,6 +13095,12 @@ spec:
                       true.
                     type: boolean
                 type: object
+              shutdown:
+                default: false
+                description: Shutdown flag tells whether controller should scale down
+                  Nginx instances. Any assosciated HorizontalPodAutoscaler is remove/created
+                  when this flag is toggled.
+                type: boolean
               suspend:
                 default: false
                 description: Suspend flag tells whether controller should suspend
@@ -13181,8 +13196,11 @@ spec:
               podSelector:
                 description: PodSelector is the NGINX's pod label selector.
                 type: string
+              revisionHash:
+                description: Revision hash calculated for the current spec of rpaasinstance
+                type: string
               wantedNginxRevisionHash:
-                description: Revision hash calculated for the current spec.
+                description: Revision hash calculated for the current spec of nginx.
                 type: string
             required:
             - nginxUpdated
