@@ -649,6 +649,21 @@ entries:
     - https://github.com/impaas/charts/releases/download/ingress-merge-0.1-alpha4/ingress-merge-0.1-alpha4.tgz
     version: 0.1-alpha4
   - apiVersion: v1
+    created: "2024-11-06T15:59:43.612700491Z"
+    description: Merge Ingress Controller combines multiple ingress resorces into
+      a new one.
+    digest: 472a3aceeaee259acd970555c7ebe31fcd92fdcfe28c59c1fa0fc6cc50a18fda
+    home: https://github.com/jakubkulhan/ingress-merge
+    keywords:
+    - ingress
+    maintainers:
+    - email: jakub.kulhan@gmail.com
+      name: Jakub Kulhan
+    name: ingress-merge
+    urls:
+    - https://github.com/impaas/charts/releases/download/ingress-merge-0.1-alpha4/ingress-merge-0.1-alpha4.tgz
+    version: 0.1-alpha4
+  - apiVersion: v1
     created: "2021-09-03T17:21:11.981258984Z"
     description: Merge Ingress Controller combines multiple ingress resorces into
       a new one.
@@ -5178,4 +5193,4 @@ entries:
     urls:
     - https://github.com/tsuru/charts/releases/download/tsuru-stack-0.1.0/tsuru-stack-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-06T15:56:05.598238775Z"
+generated: "2024-11-06T15:59:45.123048087Z"
