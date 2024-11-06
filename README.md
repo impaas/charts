@@ -1,4 +1,4 @@
-# Tsuru Helm Charts
+# ImPaaS Helm Charts
 
 ## Usage
 
@@ -8,7 +8,7 @@ Please refer to Helm's [documentation](https://helm.sh/docs/) to get started.
 Once Helm is set up properly, add the repo as follows:
 
 ```console
-helm repo add tsuru https://tsuru.github.io/charts
+helm repo add impaas https://impaas.github.io/charts
 ```
 
-You can then run `helm search repo tsuru` to see the charts.
+You can then run `helm search repo impaas` to see the charts.

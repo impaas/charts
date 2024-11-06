@@ -7,6 +7,7 @@ on:
 
 jobs:
   release:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -26,6 +27,7 @@ jobs:
 
       - name: Add dependency chart repos
         run: |
+          helm repo add impaas https://impaas.github.io/charts
           helm repo add tsuru https://tsuru.github.io/charts
           helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
           helm repo add twun https://helm.twun.io
