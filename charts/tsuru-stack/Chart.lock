@@ -1,9 +1,9 @@
 dependencies:
 - name: tsuru-api
-  repository: https://tsuru.github.io/charts
-  version: 0.3.3
+  repository: https://impaas.github.io/charts
+  version: 0.3.4
 - name: kubernetes-router
-  repository: https://tsuru.github.io/charts
+  repository: https://impaas.github.io/charts
   version: 0.1.16
 - name: ingress-nginx
   repository: https://kubernetes.github.io/ingress-nginx
@@ -23,5 +23,5 @@ dependencies:
 - name: deploy-agent
   repository: https://tsuru.github.io/charts
   version: 1.5.9
-digest: sha256:bf3d8e352ac4176bec44aefbc931f2e458dc4f8ae3554adcacc97d3df9b015d0
-generated: "2024-10-18T11:29:28.796905-03:00"
+digest: sha256:d877920eabc0dd6cec7e565b2d9af3578bdda1e9b81aba57a215adb0f12ffca9
+generated: "2024-11-06T16:21:08.680785944Z"
