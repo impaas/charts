@@ -3,6 +3,16 @@ entries:
   acl-api:
   - apiVersion: v2
     appVersion: 0.1.7
+    created: "2024-11-06T15:56:02.70329928Z"
+    description: The API of Tsuru/ACL
+    digest: 248f5e3d7b771767b286445ea3ad9aef15c2a2edaea1aa3c72fade046b3bd4f9
+    name: acl-api
+    type: application
+    urls:
+    - https://github.com/impaas/charts/releases/download/acl-api-0.0.5/acl-api-0.0.5.tgz
+    version: 0.0.5
+  - apiVersion: v2
+    appVersion: 0.1.7
     created: "2024-05-13T21:33:20.413394622Z"
     description: The API of Tsuru/ACL
     digest: cfbb2b7701295660bda45ea963f1813af04be06820e2520aa210ad9f749af1f7
@@ -12,6 +22,15 @@ entries:
     - https://github.com/impaas/charts/releases/download/acl-api-0.0.3/acl-api-0.0.3.tgz
     version: 0.0.3
   acl-operator:
+  - apiVersion: v2
+    created: "2024-11-06T15:56:02.797958123Z"
+    description: Control network access in high abstractions by Tsuru Applications
+    digest: 55b2f6a4ef2ea8a9dde84484e01a0c999516736289e7a98639e7d15da820f0ec
+    name: acl-operator
+    type: application
+    urls:
+    - https://github.com/impaas/charts/releases/download/acl-operator-0.1.11/acl-operator-0.1.11.tgz
+    version: 0.1.11
   - apiVersion: v2
     created: "2023-07-13T12:29:03.389191972Z"
     description: Control network access in high abstractions by Tsuru Applications
@@ -264,6 +283,16 @@ entries:
     - https://github.com/tsuru/charts/releases/download/conntrack-exporter-0.1.2/conntrack-exporter-0.1.2.tgz
     version: 0.1.2
   deploy-agent:
+  - apiVersion: v2
+    appVersion: 2.7.0
+    created: "2024-11-06T15:56:03.342044368Z"
+    description: A Helm chart for Kubernetes
+    digest: 60c2f2db9ba5cb02caa2e1ec34f3f2f0027950551dd574350289cef0b412cde0
+    name: deploy-agent
+    type: application
+    urls:
+    - https://github.com/impaas/charts/releases/download/deploy-agent-1.5.9/deploy-agent-1.5.9.tgz
+    version: 1.5.9
   - apiVersion: v2
     appVersion: 2.5.1
     created: "2024-05-13T21:33:20.961028737Z"
@@ -605,6 +634,21 @@ entries:
     - https://github.com/impaas/charts/releases/download/ingress-merge-0.1-alpha4/ingress-merge-0.1-alpha4.tgz
     version: 0.1-alpha4
   - apiVersion: v1
+    created: "2024-11-06T15:56:03.798078832Z"
+    description: Merge Ingress Controller combines multiple ingress resorces into
+      a new one.
+    digest: fb5a93a9fe4579133c227c478f608a54d32034ae5a76b086671784731fc2481d
+    home: https://github.com/jakubkulhan/ingress-merge
+    keywords:
+    - ingress
+    maintainers:
+    - email: jakub.kulhan@gmail.com
+      name: Jakub Kulhan
+    name: ingress-merge
+    urls:
+    - https://github.com/impaas/charts/releases/download/ingress-merge-0.1-alpha4/ingress-merge-0.1-alpha4.tgz
+    version: 0.1-alpha4
+  - apiVersion: v1
     created: "2021-09-03T17:21:11.981258984Z"
     description: Merge Ingress Controller combines multiple ingress resorces into
       a new one.
@@ -869,6 +913,19 @@ entries:
     - https://github.com/tsuru/charts/releases/download/networkapi-ingress-controller-0.1.0/networkapi-ingress-controller-0.1.0.tgz
     version: 0.1.0
   nginx-operator:
+  - apiVersion: v2
+    appVersion: 0.16.1
+    created: "2024-11-06T15:56:04.271363589Z"
+    description: Nginx operator follows the Kubernetes Operator pattern to provide
+      a way to deploy and manage nginx instances inside a cluster.
+    digest: 83f8356014768a6300ab03a120d239332d030cd6554e81d5f60e60b39068da7e
+    name: nginx-operator
+    sources:
+    - https://github.com/tsuru/nginx-operator
+    type: application
+    urls:
+    - https://github.com/impaas/charts/releases/download/nginx-operator-1.5.9/nginx-operator-1.5.9.tgz
+    version: 1.5.9
   - apiVersion: v2
     appVersion: 0.15.1
     created: "2024-01-30T12:32:14.554651491Z"
@@ -1157,6 +1214,16 @@ entries:
     version: 0.1.0
   rpaas-api:
   - apiVersion: v2
+    appVersion: 0.42.1
+    created: "2024-11-06T15:56:04.381445947Z"
+    description: The API of Tsuru/RPaaS
+    digest: bf125d92e34a71cc3ee0b50fb28e72beae220fc57f6a22cb4151696c30d9f273
+    name: rpaas-api
+    type: application
+    urls:
+    - https://github.com/impaas/charts/releases/download/rpaas-api-0.5.1/rpaas-api-0.5.1.tgz
+    version: 0.5.1
+  - apiVersion: v2
     appVersion: 0.40.0
     created: "2024-05-13T21:33:21.144885053Z"
     description: The API of Tsuru/RPaaS
@@ -1356,6 +1423,24 @@ entries:
     - https://github.com/tsuru/charts/releases/download/rpaas-monitoring-0.1.0/rpaas-monitoring-0.1.0.tgz
     version: 0.1.0
   rpaas-operator:
+  - apiVersion: v2
+    appVersion: 0.43.0
+    created: "2024-11-06T15:56:04.641602652Z"
+    dependencies:
+    - condition: nginxOperator.enabled
+      name: nginx-operator
+      repository: https://tsuru.github.io/charts
+      version: 1.*
+    description: RPaaS operator manages reverse proxy as service instances inside
+      a Kubernetes cluster
+    digest: 8ccff3ac3b806d07581c69e8f3d5a9db67449372c797acbb9832fdd044e75329
+    name: rpaas-operator
+    sources:
+    - https://github.com/tsuru/rpaas-operator
+    type: application
+    urls:
+    - https://github.com/impaas/charts/releases/download/rpaas-operator-0.16.1/rpaas-operator-0.16.1.tgz
+    version: 0.16.1
   - apiVersion: v2
     appVersion: 0.40.0
     created: "2024-05-13T21:33:21.363204322Z"
@@ -2391,6 +2476,15 @@ entries:
     version: 0.1.1
   sysctl:
   - apiVersion: v2
+    created: "2024-11-06T15:56:05.075195751Z"
+    description: A Helm chart for handle sysctl on Kubernetes nodes
+    digest: cc3595fcce8802974beff6e93a8dfdd7169e588122ae5f5b3e76f82fd8e1f5b1
+    name: sysctl
+    type: application
+    urls:
+    - https://github.com/impaas/charts/releases/download/sysctl-0.1.6/sysctl-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v2
     created: "2024-01-24T13:32:43.125909342Z"
     description: A Helm chart for handle sysctl on Kubernetes nodes
     digest: 6b4ebae54f21db6370a49b51dd1d4bde239b87b79dd9b54d2547d7a601cf8719
@@ -2445,6 +2539,16 @@ entries:
     - https://github.com/tsuru/charts/releases/download/sysctl-0.1.0/sysctl-0.1.0.tgz
     version: 0.1.0
   tsuru-api:
+  - apiVersion: v2
+    appVersion: 1.22.9
+    created: "2024-11-06T15:56:05.217049816Z"
+    description: A Helm chart to install Tsuru API Server
+    digest: 6a0a0101780276b47cc680da53451f26560c2580070684a777f6af223f48350b
+    name: tsuru-api
+    type: application
+    urls:
+    - https://github.com/impaas/charts/releases/download/tsuru-api-0.3.4/tsuru-api-0.3.4.tgz
+    version: 0.3.4
   - apiVersion: v2
     appVersion: 1.20.3
     created: "2024-05-13T21:33:21.55115302Z"
@@ -3276,6 +3380,16 @@ entries:
   tsuru-prometheus-pool:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-11-06T15:56:05.473602948Z"
+    description: Dedicated prometheus instance by tsuru pool
+    digest: b7172f9186775cd181986356fb5aa0aa475606011947d0a0e3df8533d20ffbd6
+    name: tsuru-prometheus-pool
+    type: application
+    urls:
+    - https://github.com/impaas/charts/releases/download/tsuru-prometheus-pool-0.2.7/tsuru-prometheus-pool-0.2.7.tgz
+    version: 0.2.7
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-05-13T21:33:21.928996869Z"
     description: Dedicated prometheus instance by tsuru pool
     digest: 1a389b76e5d226d469d845a9d06e3de02241aa13dcf456f4d10a188a740c9b85
@@ -3585,6 +3699,47 @@ entries:
     - https://github.com/tsuru/charts/releases/download/tsuru-prometheus-pool-0.1.0/tsuru-prometheus-pool-0.1.0.tgz
     version: 0.1.0
   tsuru-stack:
+  - apiVersion: v2
+    created: "2024-11-06T15:56:05.596641217Z"
+    dependencies:
+    - name: tsuru-api
+      repository: https://impaas.github.io/charts
+      version: 0.2.24
+    - name: kubernetes-router
+      repository: https://tsuru.github.io/charts
+      version: 0.1.16
+    - condition: ingress-nginx.enabled
+      name: ingress-nginx
+      repository: https://kubernetes.github.io/ingress-nginx
+      version: 4.*.*
+    - alias: monitoring
+      condition: monitoring.enabled
+      name: tsuru-monitoring
+      repository: https://tsuru.github.io/charts
+      version: 0.3.31
+    - alias: registry
+      condition: registry.enabled
+      name: docker-registry
+      repository: https://helm.twun.io
+      version: 1.10.1
+    - condition: mongodb.enabled
+      name: mongodb
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.31
+    - condition: certManager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: 1.3.1
+    - name: deploy-agent
+      repository: https://tsuru.github.io/charts
+      version: 1.5.9
+    description: A Helm chart for Kubernetes
+    digest: 4a368b2d026ca532d7fd5f357c273c1377ff4181b94f54d65c8a40b495803fe7
+    name: tsuru-stack
+    type: application
+    urls:
+    - https://github.com/impaas/charts/releases/download/tsuru-stack-0.8.1/tsuru-stack-0.8.1.tgz
+    version: 0.8.1
   - apiVersion: v2
     created: "2024-02-29T05:29:53.950346879Z"
     dependencies:
@@ -5023,4 +5178,4 @@ entries:
     urls:
     - https://github.com/tsuru/charts/releases/download/tsuru-stack-0.1.0/tsuru-stack-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-13T21:33:22.153534901Z"
+generated: "2024-11-06T15:56:05.598238775Z"
